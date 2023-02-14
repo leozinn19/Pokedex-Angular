@@ -13,9 +13,9 @@ export class PokemonCardComponent {
   number!: number;
 
   pegarImagemPokemon() {
-    const numeroFormatado = this.leadingZero(this.number);
+    let pokemonID = this.leadingZero(this.number);
 
-    return `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${numeroFormatado}.png`;
+    return `http://localhost:8000/pokemons/images/${pokemonID}`;
   }
 
   leadingZero(str: string | number, size = 3): string {

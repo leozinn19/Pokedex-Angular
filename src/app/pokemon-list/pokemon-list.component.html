@@ -1,7 +1,14 @@
+<div class="bounce">
+  <span class="letter">P</span><span class="letter">o</span
+  ><span class="letter">k</span><span class="letter">e</span
+  ><span class="letter">d</span> <span class="letter">e</span
+  ><span class="letter">x</span>
+</div>
+
 <div class="pokemon-list">
   <app-pokemon-card
-    *ngFor="let pokemon of pokemons; index as i"
-    [pokemon]="pokemon"
+    *ngFor="let pokemon of pokemonService.pokemons; index as i"
+    pokemon="{{ pokemon['name'] }}"
     [number]="i + 1"
   ></app-pokemon-card>
 </div>
