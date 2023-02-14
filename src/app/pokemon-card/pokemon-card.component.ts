@@ -7,7 +7,6 @@ import { PokemonService } from '../services/pokemon.service';
   styleUrls: ['./pokemon-card.component.css'],
 })
 export class PokemonCardComponent {
-  constructor(public pokemonService: PokemonService) {}
   @Input()
   pokemon: string | undefined;
 
