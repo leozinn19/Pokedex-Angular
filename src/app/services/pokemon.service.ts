@@ -15,7 +15,6 @@ export class PokemonService {
         .get<any>('http://localhost:8000/pokemons')
         .toPromise();
       this.pokemons = req;
-      console.log(this.pokemons);
     } catch (error) {
       console.error(error);
     }

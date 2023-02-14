@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { PokemonService } from '../services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -6,24 +7,18 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./pokemon-card.component.sass'],
 })
 export class PokemonCardComponent {
+  constructor(public pokemonService: PokemonService) {}
   @Input()
   pokemon: string | undefined;
 
   @Input()
   number!: number;
+  
+  pegarImagemPokemon(pokemon: any) {
+    //let pokemonName = this.pokemonService;
 
-  pegarImagemPokemon() {
-    let pokemonID = this.leadingZero(this.number);
-
-    return `http://localhost:8000/pokemons/images/${pokemonID}`;
+    return `http://localhost:8000/pokemons/images/${pokemon}`;
   }
 
-  leadingZero(str: string | number, size = 3): string {
-    let s = String(str);
-
-    while (s.length < (size || 2)) {
-      s = '0' + s;
-    }
-    return s;
-  }
+  
 }
