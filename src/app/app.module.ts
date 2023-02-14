@@ -8,6 +8,7 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { PokemonService } from './services/pokemon.service';
 import { PokemonCategoryComponent } from './pokemon-category/pokemon-category.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,15 @@ import { PokemonCategoryComponent } from './pokemon-category/pokemon-category.co
     PokemonListComponent,
     PokemonCardComponent,
     PokemonCategoryComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'categories', component: PokemonCategoryComponent },
+      {path: '', component: PokemonListComponent},
+      {path: '**', component: PageNotFoundComponent}
     ]),
   ],
   providers: [PokemonService],
