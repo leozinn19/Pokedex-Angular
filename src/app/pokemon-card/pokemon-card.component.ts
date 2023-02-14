@@ -4,7 +4,7 @@ import { PokemonService } from '../services/pokemon.service';
 @Component({
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
-  styleUrls: ['./pokemon-card.component.sass'],
+  styleUrls: ['./pokemon-card.component.css'],
 })
 export class PokemonCardComponent {
   constructor(public pokemonService: PokemonService) {}

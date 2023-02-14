@@ -1,3 +1,10 @@
+.pokemon-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 html,
 body {
   width: 100%;
