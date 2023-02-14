@@ -19,6 +19,7 @@ export class PokemonCardComponent {
 
     return `http://localhost:8000/pokemons/images/${pokemon}`;
   }
+  
 
   
 }

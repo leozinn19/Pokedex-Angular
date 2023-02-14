@@ -22,7 +22,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: 'categories', component: PokemonCategoryComponent },
+      { path: 'pokemons/:category', component: PokemonCategoryComponent },
       {path: '', component: PokemonListComponent},
       {path: '**', component: PageNotFoundComponent}
     ]),
